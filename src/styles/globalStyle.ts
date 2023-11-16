@@ -7,11 +7,14 @@ export const GlobalStyle = createGlobalStyle`
 
     --white-900: #FFFFFF;
     --white-800: #F2F2F2;
+    --white-800-opacity: rgba(242, 242, 242, 0.60);
 
     --blue-900: #123159;
     --blue-800: #6788B2;
     --blue-700: #3D9DF2;
     --blue-500: #5CF2F2;
+
+    --red-600: #CB1A1A;
 
     --gradient-blue: linear-gradient(225deg, #5CF2F2 0%, #3D9DF2 100%);
   }

@@ -1,33 +1,19 @@
-import { ReactSVG } from "react-svg";
-import { BsCheckCircle } from 'react-icons/bs'
+import { PiX } from "react-icons/pi"
 import { ButtonStyles, CheckboxControl, Container, Flex, TextStyles } from "./Task";
 
 export function Task() {
   return (
     <Container>
-      <Flex>
-        <CheckboxControl>
-          <input type="checkbox" name="f" />
-        </CheckboxControl>
-        <CheckboxControl>
-          <input type="checkbox" name="t" checked />
-        </CheckboxControl>
+      <CheckboxControl>
+        <input type="checkbox" name="f" />
         <TextStyles>Task</TextStyles>
-      </Flex>
+      </CheckboxControl>
       <Flex>
         <TextStyles>1/4</TextStyles>
         <ButtonStyles>
-          <ReactSVG src="/src/assets/delete.svg" />
+          <PiX />
         </ButtonStyles>
       </Flex>
     </Container>
   )
 }
-
-/**
- * 
- * <ButtonStyles>
-          <ReactSVG src="/src/assets/check-input.svg" />
-        </ButtonStyles>
-        <BsCheckCircle className="gradient-icon" />
- */

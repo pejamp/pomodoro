@@ -1,3 +1,4 @@
+import { TaskModal } from "./components/TaskModal"
 import { Tasks } from "./components/Tasks"
 import { Timer } from "./components/Timer"
 import { Default } from "./layout/Default"

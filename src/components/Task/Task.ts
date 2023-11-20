@@ -1,8 +1,7 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  height: 58px;
-  padding: 0 16px;
+  padding: 1rem;
   background: var(--dark-700);
   border-radius: 8px;
   border: 2px solid transparent;
@@ -30,7 +29,11 @@ export const Flex = styled.div`
 export const TextStyles = styled.p`
   flex: 1;
   color: var(--white-900);
-  font-size: 1.25rem;
+  font-size: 1rem;
+
+  @media screen and (min-width: 501px) {
+    font-size: 1.25rem;
+  }
 `
 
 export const CheckboxControl = styled.label`
@@ -94,8 +97,8 @@ export const CheckboxControl = styled.label`
 export const ButtonStyles = styled.button`
   background: transparent;
   border: 0;
-  width: 24px;
-  height: 24px;
+  width: 1.5rem;
+  height: 1.5rem;
   cursor: pointer;
   font-size: 1.5rem;
   color: var(--white-800-opacity);

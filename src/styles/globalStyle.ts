@@ -3,6 +3,7 @@ import { createGlobalStyle } from "styled-components"
 export const GlobalStyle = createGlobalStyle`
   :root {
     --dark-900: #0D0D0D;
+    --dark-900-opacity: rgba(13, 13, 13, 0.60);
     --dark-700: #141A26;
 
     --white-900: #FFFFFF;
@@ -17,6 +18,9 @@ export const GlobalStyle = createGlobalStyle`
     --red-600: #CB1A1A;
 
     --gradient-blue: linear-gradient(225deg, #5CF2F2 0%, #3D9DF2 100%);
+
+    --bp-tablet: 501px;
+    --bp-desktop: 960px;
   }
 
   *, *::before, *::after {

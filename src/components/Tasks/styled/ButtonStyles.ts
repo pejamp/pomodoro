@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const ButtonStyles = styled.button`
-  padding: 16px;
+  padding: 1rem;
   text-align: center;
   border-radius: 8px;
   border: 2px dashed rgba(242, 242, 242, 0.60);
@@ -14,5 +14,9 @@ export const ButtonStyles = styled.button`
   &:hover {
     color: var(--white-800);
     border-color: var(--white-800);
+  }
+
+  @media screen and (min-width: 501px) {
+    font-size: 1.25rem;
   }
 `;

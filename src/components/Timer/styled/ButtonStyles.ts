@@ -5,7 +5,7 @@ export const ButtonStyles = styled.button`
   border: none;
   display: flex;
   align-items: center;
-  padding: 12px 16px;
+  padding: .75rem 1rem;
   gap: 4px;
   font-size: 1.5rem;
   color: var(--white-900);

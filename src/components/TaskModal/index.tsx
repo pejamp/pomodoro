@@ -1,21 +1,36 @@
+import { useRef, useEffect } from "react";
 import {
   ButtonCount,
   ContainerModal,
   ControlButton,
   ControlButtonBg,
   ControlModal,
+  Form,
   InputNumber,
   InputTask,
   LabelStyled,
-  Overlay,
 } from "./TaskModal";
 import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
 
-export function TaskModal() {
+interface ITaskModal {
+  openModal: boolean;
+  closeModal: () => void;
+}
+
+export function TaskModal({ openModal, closeModal }: ITaskModal) {
+  const ref = useRef<HTMLDialogElement>(null);
+
+  useEffect(() => {
+    if (openModal) {
+      ref.current?.showModal();
+    } else {
+      ref.current?.close();
+    }
+  }, [openModal]);
+
   return (
-    <>
-      <Overlay></Overlay>
-      <ContainerModal open>
+    <ContainerModal ref={ref} onCancel={closeModal}>
+      <Form>
         <div>
           <LabelStyled>
             Task:
@@ -44,10 +59,10 @@ export function TaskModal() {
           </LabelStyled>
         </div>
         <ControlModal>
-          <ControlButton>Cancel</ControlButton>
+          <ControlButton type="button" onClick={closeModal}>Cancel</ControlButton>
           <ControlButtonBg>Save</ControlButtonBg>
         </ControlModal>
-      </ContainerModal>
-    </>
+      </Form>
+    </ContainerModal>
   );
 }

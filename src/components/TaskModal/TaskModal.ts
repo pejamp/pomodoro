@@ -2,30 +2,31 @@ import styled from "styled-components";
 
 export const ContainerModal = styled.dialog`
   width: 21.25rem;
-  min-height: 14rem;
   border-radius: 6px;
   background: var(--dark-700);
   padding: 1rem 1.5rem;
   border: none;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
   margin: auto;
 
   @media screen and (min-width: 501px) {
     width: 30rem;
-    min-height: 20rem;
     padding: 1.5rem 2rem;
+  }
+
+  &::backdrop {
+    background: rgba(13, 13, 13, 0.60);
   }
 `
 
-export const Overlay = styled.div`
-  background: var(--dark-900-opacity);
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  min-height: 100vh;
+export const Form = styled.form`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 12rem;
+
+  @media screen and (min-width: 501px) {
+    min-height: 17rem;
+  }
 `
 
 export const LabelStyled = styled.label`
@@ -119,7 +120,7 @@ export const ControlButton = styled.button`
   text-align: center;
   background: transparent;
   border: none;
-  color: var(--white-800);
+  color: var(--white-900);
   font-size: 0.875rem;
   cursor: pointer;
 

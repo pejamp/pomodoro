@@ -2,11 +2,16 @@ import { Container } from './styled/TasksStyles'
 import { ButtonStyles } from './styled/ButtonStyles'
 import { Task } from '../Task'
 
-export function Tasks() {
+interface ITasks {
+  openModal: () => void;
+}
+
+export function Tasks({ openModal }: ITasks) {
+
   return (
     <Container>
       <Task />
-      <ButtonStyles>add new task</ButtonStyles>
+      <ButtonStyles onClick={openModal}>add new task</ButtonStyles>
     </Container>
   )
 }

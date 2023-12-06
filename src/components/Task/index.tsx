@@ -5,7 +5,7 @@ export function Task() {
   return (
     <Container>
       <CheckboxControl>
-        <input type="checkbox" name="f" />
+        <input type="checkbox" name="" />
         <TextStyles>Task</TextStyles>
       </CheckboxControl>
       <Flex>
